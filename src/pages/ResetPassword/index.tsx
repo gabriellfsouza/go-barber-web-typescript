@@ -9,7 +9,7 @@ import logo from '../../assets/logo.svg';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { useAuth } from '../../context/AuthContext';
+// import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import getValidationErrors from '../../utils/getValidationErrors';
 
@@ -24,8 +24,8 @@ interface ResetPasswordFormData {
 const ResetPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const history = useHistory();
-  const { signIn } = useAuth();
-  const { addToast, removeToast } = useToast();
+  // const { signIn } = useAuth();
+  const { addToast } = useToast();
 
   const handleSubmit = useCallback(
     async (data: ResetPasswordFormData) => {
